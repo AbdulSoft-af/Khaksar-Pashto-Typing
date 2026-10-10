@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ps" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f8"><meta name="description" content="د پښتو ټایپ تمرین وکړئ، سرعت او دقت په ژوندۍ بڼه اندازه کړئ.">
+  <title>د ټایپ تمرین — Khaksar Pashto Typing</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/statistics.js"></script><script defer src="../assets/js/lessons-data.js"></script><script defer src="../assets/js/app.js"></script><script defer src="../assets/js/keyboard.js"></script><script defer src="../assets/js/typing-engine.js"></script>
+</head>
+<body data-page="practice" data-base="../">
+<a class="skip-link" href="#main-content">اصلي منځپانګې ته لاړ شئ</a><div id="site-header"></div>
+<main id="main-content" class="container page-space">
+  <div class="page-heading"><div><span class="eyebrow"><img class="typing-icon" src="../assets/icons/keyboard.svg" alt="" aria-hidden="true"> د ټایپ کولو لابراتوار</span><h1><img class="typing-icon" src="../assets/icons/keyboard.svg" alt="" aria-hidden="true"> تمرین وکړئ، پرمختګ وګورئ</h1><p>په خپل سرعت ولیکئ. سم توري شین او ناسم توري سور رنګ ښيي.</p></div><a class="button button-secondary" href="results.html">زما پایلې</a></div>
+  <section class="practice-controls panel" aria-label="د تمرین تنظیمات">
+    <div class="control-field"><label for="duration-select">د تمرین وخت</label><select id="duration-select"><option value="30">۳۰ ثانیې</option><option value="60" selected>۱ دقیقه</option><option value="180">۳ دقیقې</option><option value="300">۵ دقیقې</option></select></div>
+    <div class="control-field"><label for="level-select">د متن کچه</label><select id="level-select"><option value="all">ټولې کچې</option><option value="1">پیل کوونکي</option><option value="2">منځنۍ کچه</option><option value="3">پرمختللې کچه</option></select></div>
+    <div class="control-field"><label for="topic-select">د متن موضوع</label><select id="topic-select"><option value="all">بېلابېل متنونه</option><option value="daily">ورځنی ژوند</option><option value="culture">ژبه او کلتور</option><option value="nature">طبیعت</option><option value="technology">ټکنالوژي</option></select></div>
+    <div class="control-actions"><button type="button" class="button button-secondary" id="new-passage">نوی متن ↻</button></div>
+  </section>
+
+  <section class="practice-metrics" aria-label="ژوندۍ پایلې">
+    <article class="metric-card"><span class="metric-icon" aria-hidden="true">↗</span><span>سرعت (WPM)</span><strong id="live-wpm">۰</strong></article>
+    <article class="metric-card"><span class="metric-icon" aria-hidden="true">◎</span><span>دقت</span><strong><span id="live-accuracy">۱۰۰</span><small>%</small></strong></article>
+    <article class="metric-card"><span class="metric-icon" aria-hidden="true">⌁</span><span>حروف په دقیقه</span><strong id="live-cpm">۰</strong></article>
+    <article class="metric-card metric-card-timer"><span class="metric-icon" aria-hidden="true">◷</span><span>پاتې وخت</span><strong id="live-timer">۰۱:۰۰</strong></article>
+  </section>
+
+  <section class="panel typing-panel" aria-labelledby="passage-title">
+    <div class="typing-panel-header"><div><span class="eyebrow" id="passage-level">پیل کوونکي</span><h2 id="passage-title">متن په دقت سره ولیکئ</h2></div><span class="session-status" id="session-status"><i></i> د پیل لپاره چمتو</span></div>
+    <div class="passage-area" id="passage-display" dir="rtl" aria-label="د تمرین لپاره متن" tabindex="0"><p class="passage-placeholder">د تمرین متن چمتو کېږي…</p></div>
+    <div class="passage-legend"><span><i class="legend-dot legend-correct"></i> سم توری</span><span><i class="legend-dot legend-wrong"></i> ناسم توری</span><span><i class="legend-dot legend-current"></i> راتلونکی توری</span></div>
+    <label class="input-label" for="typing-input"><img class="typing-icon" src="../assets/icons/keyboard.svg" alt="" aria-hidden="true"> دلته یې ولیکئ</label>
+    <textarea id="typing-input" rows="3" dir="rtl" lang="ps" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="د متن لیکل دلته پیل کړئ…" aria-describedby="typing-help"></textarea>
+    <div class="typing-hints"><span id="typing-help">د ټایپ کولو لپاره پورته متن تعقیب کړئ. د تورو اصلاح هم کولای شئ.</span><span id="typed-progress">۰ / ۰ توري</span></div>
+    <div class="progress-track typing-progress" role="progressbar" aria-label="د متن د ټایپ کولو پرمختګ" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="typing-progress"><span id="typing-progress-bar"></span></div>
+    <div class="typing-actions"><button class="button button-primary" id="finish-session" type="button">تمرین پای ته ورسوه</button><button class="button button-secondary" id="reset-session" type="button">له سره پیل ↻</button><span class="muted-copy" id="session-feedback" role="status" aria-live="polite">د وخت حساب به د لومړي توري په لیکلو پیل شي.</span></div>
+  </section>
+
+  <section class="panel keyboard-panel" aria-labelledby="keyboard-heading">
+    <div class="panel-title-row"><div><span class="eyebrow">د تورو پېژندنه</span><h2 id="keyboard-heading"><img class="typing-icon" src="../assets/icons/keyboard.svg" alt="" aria-hidden="true"> مجازي پښتو کیبورډ</h2></div><span class="keyboard-note">د توري په کېکاږلو سره یې لیکلای شئ</span></div>
+    <p class="small-note">د کیبورډ د تورو فزیکي ځای د کمپیوټر د ټاکل شوي پښتو Layout له مخې توپیر کولای شي.</p>
+    <div id="virtual-keyboard" class="virtual-keyboard" aria-label="مجازي پښتو کیبورډ"></div>
+  </section>
+  <p class="privacy-note">ستاسو د تمرین پایلې په همدې براوزر کې ساتل کېږي؛ حساب جوړولو یا سرور ته د متن لېږلو ته اړتیا نشته.</p>
+</main><div id="site-footer"></div>
+</body></html>
