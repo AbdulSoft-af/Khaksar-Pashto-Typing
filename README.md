@@ -2,14 +2,6 @@
 
 A lightweight, multi-page Pashto typing practice website built with semantic HTML, CSS, and vanilla JavaScript. No build step or third-party JavaScript dependency is required.
 
-## Pages
-
-- `index.html` — dashboard, daily goal, and personal summary.
-- `pages/practice.html` — timed typing exercises, character-level feedback, metrics, and a virtual Pashto keyboard.
-- `pages/lessons.html` — nine guided lessons with level filtering and completion state.
-- `pages/results.html` — session history, summary statistics, individual removal, and CSV export.
-- `pages/about.html` — usage guide and local-storage privacy note.
-
 ## Run locally
 
 Open `index.html` in a modern browser, or serve the folder over HTTP for a more realistic deployment test. This project uses relative paths and does not need a bundler, npm packages, or a database.
