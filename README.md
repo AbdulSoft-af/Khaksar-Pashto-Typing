@@ -24,33 +24,8 @@ Then open `http://localhost:8000/Khaksar-Pashto-Typing/` if the folder is served
 - Lesson completion, best WPM, average accuracy, daily practice count, dark mode, local session history, and CSV export.
 - All saved exercise data remains in the browser's LocalStorage; no backend or account is used.
 
-## Measurement notes
-
-WPM is estimated as correctly matched characters divided by five, per elapsed minute. CPM counts correctly matched characters per elapsed minute. Accuracy is the number of correctly matched typed graphemes divided by all typed graphemes. The results are useful for tracking progress, but they are estimates rather than a universal certification metric.
 
 ## Data and privacy
 
 The application stores preferences, completed lesson IDs, and session statistics in LocalStorage. Clearing browser storage removes these records. No text or result is intentionally transmitted to a remote service.
 
-## Smoke tests
-
-Run the included dependency-free checks with Node.js:
-
-```bash
-node tests/smoke-test.js
-```
-
-The smoke test validates page metadata, local asset references, bundled fonts and keyboard icon, JavaScript syntax, lesson data, Unicode grapheme handling, and typing-stat calculations. In-browser interaction and responsive-layout checks were also run with browser automation during development.
-
-## Suggested production checks
-
-Test on the actual Pashto keyboard layout used by the audience, check Unicode edge cases on target browsers, run accessibility checks with a screen reader, and serve over HTTPS when deployed publicly.
-
-## Offline assets and licenses
-
-The app ships its Arabic-script fonts inside `assets/fonts/` and references them locally in `assets/css/style.css`. The font files are Noto Sans Arabic family files, with the SIL Open Font License included beside them. The required Pashto-specific letters (including پ، ټ، ډ، ړ، ږ، ښ، څ، ځ، ګ، ڼ، ئ، ۍ، ې) were checked for font glyph coverage. The keyboard SVG is stored at `assets/icons/keyboard.svg` and is referenced using relative paths, so it does not need an internet connection.
-
-Upstream font source: https://github.com/google/fonts/tree/main/ofl/notosansarabic
-Keyboard icon design reference: https://github.com/tabler/tabler-icons
-
-The bundled static font files are self-contained and the app does not request them from the upstream site at runtime.
